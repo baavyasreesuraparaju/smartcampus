@@ -1,0 +1,498 @@
+.block-finder-page {
+  min-height: 100vh;
+  background: #0b1120;
+  color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.block-header {
+  height: 68px;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #111827;
+  border-bottom: 1px solid #1f2937;
+}
+
+.block-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.block-logo {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: #2563eb;
+  color: white;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.block-brand strong {
+  display: block;
+  color: #f8fafc;
+  font-size: 15px;
+}
+
+.block-brand span {
+  display: block;
+  margin-top: 2px;
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.open-gmaps-btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.open-gmaps-btn:hover {
+  background: #1d4ed8;
+}
+
+.back-dashboard {
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: #1f2937;
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.back-dashboard:hover {
+  background: #374151;
+}
+
+/* Main Map Area */
+.map-view-main {
+  flex: 1;
+  padding: 18px 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 1550px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Campus Blocks Selector Bar */
+.campus-blocks-bar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #111827;
+  border: 1px solid #1f2937;
+  padding: 10px 16px;
+  border-radius: 12px;
+  overflow-x: auto;
+}
+
+.bar-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 800;
+  color: #94a3b8;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.live-dot {
+  color: #22c55e;
+  animation: pulse-dot 2s infinite ease-in-out;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.block-chips {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.block-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #0b1120;
+  border: 1px solid #374151;
+  padding: 6px 14px;
+  border-radius: 20px;
+  color: #cbd5e1;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.block-chip:hover {
+  background: #1f2937;
+  border-color: #64748b;
+  color: white;
+}
+
+.block-chip.active {
+  background: #1f2937;
+  border-width: 2px;
+  color: white;
+}
+
+.chip-badge {
+  display: inline-block;
+  padding: 2px 7px;
+  border-radius: 6px;
+  color: white;
+  font-weight: 800;
+  font-size: 11px;
+}
+
+.chip-name {
+  font-weight: 700;
+}
+
+.chip-sub {
+  font-size: 11px;
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+/* Active Block Strip */
+.active-block-strip {
+  background: #111827;
+  border-left: 5px solid #2563eb;
+  border-radius: 12px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  transition: all 0.3s ease;
+}
+
+.strip-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.strip-code-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-weight: 800;
+  font-size: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.strip-left h2 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.strip-left p {
+  margin: 3px 0 0 0;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.strip-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.tag-badge {
+  font-size: 12px;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+.quick-report-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  transition: opacity 0.2s, transform 0.2s;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+.quick-report-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* Campus Map Card */
+.campus-map-card {
+  flex: 1;
+  min-height: 580px;
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+}
+
+.map-card-bar {
+  padding: 10px 18px;
+  background: #090e1a;
+  border-bottom: 1px solid #1f2937;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.map-title-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.map-title-info strong {
+  color: #f8fafc;
+}
+
+.coords-label {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.coords-label strong {
+  color: #60a5fa;
+}
+
+.map-quick-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.legend-tag {
+  font-size: 11px;
+  color: #cbd5e1;
+  background: #111827;
+  padding: 3px 9px;
+  border-radius: 6px;
+  border: 1px solid #374151;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.legend-tag:hover {
+  border-color: #60a5fa;
+  transform: translateY(-1px);
+}
+
+.legend-tag.active-legend {
+  font-weight: 700;
+}
+
+/* iFrame container with Spotlight HUD */
+.iframe-wrapper {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  min-height: 540px;
+  position: relative;
+}
+
+.iframe-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Spotlight HUD Indicator Floating Banner */
+.spotlight-hud {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.target-pulse-beacon {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(11, 17, 32, 0.92);
+  backdrop-filter: blur(8px);
+  padding: 8px 16px;
+  border-radius: 30px;
+  border: 2px solid #2563eb;
+  animation: beacon-glow 2s infinite alternate ease-in-out;
+  pointer-events: auto;
+}
+
+@keyframes beacon-glow {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.02); }
+}
+
+.beacon-pin {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-weight: 900;
+  font-size: 13px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.beacon-label {
+  display: flex;
+  flex-direction: column;
+}
+
+.beacon-label strong {
+  font-size: 12px;
+  color: #f8fafc;
+  letter-spacing: 0.5px;
+}
+
+.beacon-label small {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+/* Radar Pin overlay on map */
+.map-radar-pin {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 15;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.radar-ping {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: radar-wave 2s infinite cubic-bezier(0, 0.2, 0.8, 1);
+}
+
+@keyframes radar-wave {
+  0% {
+    transform: scale(0.3);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+.radar-center-pill {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-weight: 900;
+  font-size: 15px;
+  z-index: 2;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.6), 0 0 20px currentColor;
+  border: 3px solid white;
+}
+
+.radar-tooltip {
+  position: absolute;
+  bottom: 46px;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(8px);
+  border: 1.5px solid;
+  border-radius: 8px;
+  padding: 6px 12px;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+.radar-tooltip strong {
+  font-size: 12px;
+  color: #f8fafc;
+}
+
+.radar-tooltip span {
+  font-size: 11px;
+  color: #cbd5e1;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .map-view-main {
+    padding: 14px 12px;
+  }
+  .active-block-strip {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .campus-map-card {
+    min-height: 460px;
+  }
+  .iframe-wrapper {
+    min-height: 420px;
+  }
+  .spotlight-hud {
+    top: 10px;
+    right: 10px;
+  }
+}

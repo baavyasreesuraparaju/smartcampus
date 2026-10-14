@@ -1,0 +1,155 @@
+.admin-requests-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+.admin-requests-main {
+  margin-left: 220px;
+  padding: 40px;
+}
+
+.requests-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.requests-header span {
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.requests-header h1 {
+  margin: 8px 0;
+  color: #0f172a;
+}
+
+.requests-header p {
+  color: #64748b;
+}
+
+.back-dashboard {
+  padding: 10px 15px;
+  background: white;
+  border-radius: 8px;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.requests-card {
+  padding: 25px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.06);
+}
+
+.request-filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.request-filters input,
+.request-filters select {
+  padding: 11px 13px;
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+  outline: none;
+  font: inherit;
+}
+
+.request-filters input {
+  flex: 1;
+}
+
+.request-item {
+  display: grid;
+  grid-template-columns: 1fr 100px 120px 90px;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.request-id {
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.request-main h3 {
+  margin: 5px 0;
+  color: #0f172a;
+}
+
+.request-main p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.priority,
+.request-status {
+  padding: 6px 10px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.priority.high {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.priority.medium {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.priority.low {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.request-status.pending {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.request-status.in-progress {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.request-status.resolved {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.manage-btn {
+  padding: 8px 12px;
+  background: #2563eb;
+  color: white;
+  border-radius: 7px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+@media (max-width: 850px) {
+  .admin-requests-main {
+    margin-left: 180px;
+    padding: 25px;
+  }
+
+  .request-item {
+    grid-template-columns: 1fr;
+  }
+
+  .request-filters {
+    flex-direction: column;
+  }
+}

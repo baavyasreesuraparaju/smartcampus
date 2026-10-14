@@ -1,0 +1,304 @@
+
+.admin-dashboard {
+  min-height: 100vh;
+  background: #f5f7fb;
+  color: #172033;
+}
+
+.admin-sidebar {
+  width: 230px;
+  background: #101a33;
+  color: white;
+  position: fixed;
+  inset: 0 auto 0 0;
+  padding: 25px 15px;
+}
+
+.admin-brand {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 0 10px 25px;
+  border-bottom: 1px solid #26314b;
+}
+
+.admin-brand > div {
+  background: #2563eb;
+  padding: 12px;
+  border-radius: 9px;
+  font-weight: bold;
+}
+
+.admin-brand strong,
+.admin-brand small {
+  display: block;
+}
+
+.admin-brand small {
+  color: #9da8bd;
+  font-size: 10px;
+  margin-top: 3px;
+}
+
+.admin-nav {
+  display: block;
+  color: #aeb8cc;
+  text-decoration: none;
+  padding: 13px;
+  margin: 7px 0;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.admin-nav:hover,
+.admin-nav.active {
+  background: #1d2b4c;
+  color: white;
+}
+
+.admin-logout {
+  position: absolute;
+  bottom: 25px;
+  left: 15px;
+  width: calc(100% - 30px);
+  padding: 12px;
+  background: transparent;
+  border: 0;
+  color: #aeb8cc;
+  text-align: left;
+  cursor: pointer;
+}
+
+.admin-main {
+  margin-left: 230px;
+  padding: 35px;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.admin-header > div:first-child > span {
+  color: #2563eb;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.admin-header h1 {
+  margin: 7px 0;
+  font-size: 27px;
+}
+
+.admin-header p {
+  color: #7b8798;
+  font-size: 13px;
+}
+
+.admin-profile {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.admin-profile > div {
+  background: #dbeafe;
+  color: #2563eb;
+  padding: 12px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.admin-profile strong,
+.admin-profile small {
+  display: block;
+}
+
+.admin-profile small {
+  color: #7b8798;
+}
+
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.admin-stats div,
+.admin-card,
+.admin-ai {
+  background: white;
+  border: 1px solid #e5eaf2;
+  border-radius: 13px;
+  padding: 20px;
+}
+
+.admin-stats span,
+.admin-stats strong {
+  display: block;
+}
+
+.admin-stats span {
+  color: #7b8798;
+  font-size: 11px;
+}
+
+.admin-stats strong {
+  margin-top: 5px;
+  font-size: 24px;
+}
+
+.admin-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-card-header h2 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.admin-card-header p {
+  color: #8993a4;
+  font-size: 11px;
+}
+
+.admin-card-header a {
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 11px;
+}
+
+.admin-table {
+  margin-top: 20px;
+}
+
+.table-head,
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr .8fr .9fr;
+  gap: 15px;
+  align-items: center;
+  padding: 14px 0;
+}
+
+.table-head {
+  color: #8993a4;
+  font-size: 9px;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.table-row {
+  border-bottom: 1px solid #edf0f5;
+  font-size: 11px;
+}
+
+.table-row strong,
+.table-row small {
+  display: block;
+}
+
+.table-row small {
+  color: #929baa;
+  margin-top: 4px;
+  font-size: 9px;
+}
+
+.priority,
+.admin-status {
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.high {
+  color: #dc2626;
+}
+
+.medium {
+  color: #c77900;
+}
+
+.low {
+  color: #138a50;
+}
+
+.admin-status {
+  padding: 6px 9px;
+  border-radius: 15px;
+  background: #eef4ff;
+  color: #2563eb;
+  width: fit-content;
+}
+
+.admin-ai {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.ai-admin-icon {
+  background: #f1eafe;
+  color: #7c3aed;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.admin-ai span {
+  color: #7c3aed;
+  font-size: 9px;
+  font-weight: bold;
+}
+
+.admin-ai h2 {
+  margin: 5px 0;
+  font-size: 15px;
+}
+
+.admin-ai p {
+  color: #7b8798;
+  font-size: 11px;
+}
+
+@media (max-width: 800px) {
+  .admin-sidebar {
+    display: none;
+  }
+
+  .admin-main {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .admin-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .table-head {
+    display: none;
+  }
+
+  .table-row {
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+}
+.view-btn {
+  padding: 7px 12px;
+  border-radius: 6px;
+  background: #eff6ff;
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.view-btn:hover {
+  background: #dbeafe;
+}
+

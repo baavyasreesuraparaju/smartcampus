@@ -1,0 +1,177 @@
+
+.request-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+  color: #172033;
+  padding: 35px;
+}
+
+.request-header {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.back-link {
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.request-header h1 {
+  margin: 20px 0 5px;
+  font-size: 28px;
+}
+
+.request-header p {
+  color: #7b8798;
+  margin: 0 0 25px;
+}
+
+.request-container {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 20px;
+}
+
+.request-card,
+.request-tips {
+  background: white;
+  border: 1px solid #e5eaf2;
+  border-radius: 14px;
+  padding: 25px;
+}
+
+.form-heading {
+  border-bottom: 1px solid #edf0f5;
+  margin-bottom: 22px;
+}
+
+.form-heading h2 {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.form-heading p {
+  color: #8993a4;
+  font-size: 12px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #dfe5ee;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 12px;
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #2563eb;
+}
+
+.ai-info {
+  display: flex;
+  gap: 12px;
+  background: #f5f1ff;
+  padding: 14px;
+  border-radius: 9px;
+  margin: 20px 0;
+}
+
+.ai-info span {
+  color: #7c3aed;
+  font-size: 20px;
+}
+
+.ai-info strong {
+  font-size: 12px;
+}
+
+.ai-info p {
+  color: #77728a;
+  font-size: 10px;
+  margin: 5px 0 0;
+  line-height: 1.5;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.cancel-btn,
+.submit-btn {
+  padding: 11px 18px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  color: #596579;
+  border: 1px solid #dfe5ee;
+}
+
+.submit-btn {
+  border: none;
+  background: #2563eb;
+  color: white;
+}
+
+.request-tips h3 {
+  font-size: 15px;
+}
+
+.tips-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e8f0ff;
+  color: #2563eb;
+  border-radius: 10px;
+}
+
+.request-tips li {
+  color: #687386;
+  font-size: 11px;
+  margin: 14px 0;
+}
+
+@media (max-width: 750px) {
+  .request-page {
+    padding: 20px;
+  }
+
+  .request-container {
+    grid-template-columns: 1fr;
+  }
+}
+
